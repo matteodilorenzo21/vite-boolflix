@@ -88,7 +88,11 @@
                 <p><span>Overview: </span>{{ serie.overview }}</p>
                 <p><span>Language: </span>{{ serie.original_language }}</p>
                 <div class="rating">
-                  <span v-for="i in 5" :key="i" :class="getStarClass(i, serie.vote_average)"></span>
+                  <span 
+                  v-for="i in 5" 
+                  :key="i" 
+                  :class="getStarClass(i, serie.vote_average)">
+                </span>
                 </div>
               </div>
             </div>
@@ -154,7 +158,7 @@
     padding: 5px 0;
   }
 
-  span {
+  p span {
     font-weight: 700;
   }
 </style>
